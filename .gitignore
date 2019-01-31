@@ -17,5 +17,8 @@ python-example_files/
 python-example.pdf
 README
 results.html
+.Rhistory
+*.Rproj
+.Rproj.user
 *.swp
 target/
