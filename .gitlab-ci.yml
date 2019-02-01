@@ -1,26 +1,17 @@
 image: r-base:3.5.2
 
-variables:
-  R_LIBS_USER: $CI_PROJECT_DIR/.rcache/
-
-cache:
-  key: $CI_COMMIT_REF_NAME
-  paths:
-    - $R_LIBS_USER
-
 stages:
   - load
 
 before_script:
-  - test ! -d $R_LIBS_USER && mkdir $R_LIBS_USER
-  - R -e "show(paste('Using libPaths', .libPaths()))"
-  - R -e "install.packages(c('lubridate', 'stringr'))"
+  - apt-get update
+  - apt-get --assume-yes install r-cran-lubridate r-cran-stringr
 
 load:
   stage: load
   script:
-    - R --no-save < $CI_PROJECT_DIR/loaddata.R
+    - R --no-save < $PWD/loaddata.R
   artifacts:
     paths:
-      - $CI_PROJECT_DIR/*.png
+      - $PWD/*.png
 
