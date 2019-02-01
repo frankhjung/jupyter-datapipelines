@@ -7,8 +7,8 @@
 
 ## Day 2 - Validation & Creating Datasets from URLs
 
-  * loading data from a URL
-  * validating data
+  * loading data from a URL using Python3
+  * loading data from a URL using R3.5.2
 
 ## Day 3 - Automated Data Pipelines
 
