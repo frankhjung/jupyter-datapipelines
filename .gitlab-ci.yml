@@ -1,10 +1,18 @@
 image: python:3.7.2-stretch
 
+variables:
+  PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
+
+cache:
+  key: $CI_COMMIT_REF_NAME
+  paths:
+    - $PIP_CACHE_DIR
+
 stages:
   - load
 
 before_script:
-  - python3 -m pip install --no-cache pandas
+  - python3 -m pip install --upgrade pandas
   - python3 -m pip list
 
 load:
