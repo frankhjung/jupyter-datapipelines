@@ -1,26 +1,22 @@
-image: r-base:3.5.2
+image: python:3.7.2-stretch
 
 variables:
-  R_LIBS_USER: $CI_PROJECT_DIR/.rcache/
+  PIP_CACHE_DIR: $CI_PROJECT_DIR/.cache/pip
 
 cache:
   key: $CI_COMMIT_REF_NAME
   paths:
-    - $R_LIBS_USER
+    - $PIP_CACHE_DIR
 
 stages:
   - load
 
 before_script:
-  - test ! -d $R_LIBS_USER && mkdir $R_LIBS_USER
-  - R -e "show(paste('Using libPaths', .libPaths()))"
-  - R -e "install.packages(c('lubridate', 'stringr'))"
+  - python3 -m pip install --upgrade pandas
+  - python3 -m pip list
 
 load:
   stage: load
   script:
-    - R --no-save < $CI_PROJECT_DIR/loaddata.R
-  artifacts:
-    paths:
-      - $CI_PROJECT_DIR/*.png
+    - python3 $PWD/loaddata.py
 
