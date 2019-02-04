@@ -18,5 +18,5 @@ before_script:
 load:
   stage: load
   script:
-    - python3 $PWD/loaddata.py
+    - python3 loaddata.py
 
