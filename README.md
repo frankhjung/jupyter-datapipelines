@@ -18,7 +18,7 @@ also run on GitLab.
   * loading data from a URL using Python3
   * loading data from a URL using R3.5.2
 
-## Day 3 - ETL &amp; Creating Datasets from Kernel Output
+## Day 3 - ETL & Creating Datasets from Kernel Output
 
   * basic principles of Extract, Transform & Load (aka ETL) pipelines
   * creating datasets from Kaggle Kernel outputs
@@ -32,4 +32,31 @@ also run on GitLab.
   * [pandas](https://pandas.pydata.org)
   * [numpy](https://www.numpy.org)
   * [GNU R](https://www.r-project.org/)
+
+## Repositories
+
+This project is mirrored at 3 different Git repositories. The reason for this
+was to explore features that each have to offer. In particular what pipeline support each provide.
+
+### GitLab
+
+[GitLab](https://gitlab.com) pipelines are configured using [.gitlab-ci.yml](.gitlab-ci.yml). Each
+branch has it's own configuration:
+
+* [master:.gitlab-ci.yml](https://gitlab.com/theMarloGroup/jupyter-notebooks/datapipelines/blob/master/.gitlab-ci.yml)
+* [gnur:.gitlab-ci.yml](https://gitlab.com/theMarloGroup/jupyter-notebooks/datapipelines/blob/gnur/.gitlab-ci.yml)
+
+### Bitbucket
+
+[Bitbucket](https://bitbucket.org) pipelines are configured using
+[bitbucket-pipelines.yml](https://bitbucket.org/frankhjung/jupyter-datapipelines/src/master/bitbucket-pipelines.yml).
+
+The same configuration is used for each branch.
+
+### GitHub
+
+[GitHub](https://github.com) uses [Azure pipelines](https://github.com/marketplace/azure-pipelines).
+
+The pipeline configuration is
+[azure-pipelines.yml](https://github.com/frankhjung/jupyter-datapipelines/blob/master/azure-pipelines.yml).
 
