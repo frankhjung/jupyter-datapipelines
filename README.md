@@ -18,7 +18,7 @@ also run on GitLab.
   * loading data from a URL using Python3
   * loading data from a URL using R3.5.2
 
-## Day 3 - ETL &amp; Creating Datasets from Kernel Output
+## Day 3 - ETL & Creating Datasets from Kernel Output
 
   * basic principles of Extract, Transform & Load (aka ETL) pipelines
   * creating datasets from Kaggle Kernel outputs
