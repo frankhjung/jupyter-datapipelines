@@ -1,10 +1,12 @@
-image: python:3.5.1
+# only use spaces to indent your .yml configuration.
+image: python:3.7.2-stretch
 
 pipelines:
   default:
     - step:
+        caches:
+          - pip
         script:
-          - python -m pip install --upgrade pandas
-          - python -m pip list
-          - python loaddata.py
-
+          - python3 -m pip install --upgrade pandas
+          - python3 -m pip list
+          - python3 loaddata.py
