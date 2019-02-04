@@ -18,9 +18,9 @@ import pandas as pd     # data processing, CSV file I/O (e.g. pd.read_csv)
 
 # setup logging
 log = logging.getLogger(__name__)
-logHandler = logging.StreamHandler(sys.stdout)
-logHandler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
-log.addHandler(logHandler)
+log_handler = logging.StreamHandler(sys.stdout)
+log_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
+log.addHandler(log_handler)
 log.setLevel(logging.DEBUG)
 
 # show versions of software used
