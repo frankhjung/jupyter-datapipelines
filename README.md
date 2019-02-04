@@ -36,12 +36,13 @@ also run on GitLab.
 ## Repositories
 
 This project is mirrored at 3 different Git repositories. The reason for this
-was to explore features that each have to offer. In particular what pipeline support each provide.
+was to explore features that each have to offer. In particular what pipeline
+support each provide.
 
 ### GitLab
 
-[GitLab](https://gitlab.com) pipelines are configured using [.gitlab-ci.yml](.gitlab-ci.yml). Each
-branch has it's own configuration:
+[GitLab](https://gitlab.com) pipelines are configured using
+[.gitlab-ci.yml](.gitlab-ci.yml). Each branch has it's own configuration:
 
 * [master:.gitlab-ci.yml](https://gitlab.com/theMarloGroup/jupyter-notebooks/datapipelines/blob/master/.gitlab-ci.yml)
 * [gnur:.gitlab-ci.yml](https://gitlab.com/theMarloGroup/jupyter-notebooks/datapipelines/blob/gnur/.gitlab-ci.yml)
@@ -62,6 +63,6 @@ The pipeline configuration is
 
 This is the link to see pipeline build history, https://dev.azure.com/FrankJung/
 
-
-See also [python pipeline documentation](https://docs.microsoft.com/azure/devops/pipelines/languages/python).
+See also [python pipeline
+documentation](https://docs.microsoft.com/azure/devops/pipelines/languages/python).
 
