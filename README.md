@@ -60,3 +60,5 @@ The same configuration is used for each branch.
 The pipeline configuration is
 [azure-pipelines.yml](https://github.com/frankhjung/jupyter-datapipelines/blob/master/azure-pipelines.yml).
 
+See also [python pipeline documentation](https://docs.microsoft.com/azure/devops/pipelines/languages/python).
+
