@@ -30,6 +30,7 @@ log.debug(f"logging version: {logging.__version__}")
 # declare URL to dataset
 URL = 'https://data.gov.au/dataset/7f90d314-fa64-4bae-8609-2e26ff48f6fa/resource/05390642-bdeb-4174-9bd5-c1df6e6d1e9e/download/2018-australian-sdg-indicator-9-2-2v2.csv'
 
+# load into dataframe and print
 d = pd.read_csv(URL)
 print(d)
 
